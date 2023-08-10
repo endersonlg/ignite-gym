@@ -81,7 +81,7 @@ export function Exercise() {
               </HStack>
 
               <HStack>
-                <SeriesSvg />
+                <RepetitionsSvg />
                 <Text color={'gray.200'} ml={2}>
                   12 repetições
                 </Text>
