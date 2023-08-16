@@ -50,7 +50,8 @@ const profileSchema = yup.object({
     .transform((value) => value || null)
     .oneOf([yup.ref('password')], 'A confirmação de senha não confere.')
     .when('password', {
-      is: (Field) => Field,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      is: (Field: any) => Field,
       then: (schema) =>
         schema
           .nullable()
